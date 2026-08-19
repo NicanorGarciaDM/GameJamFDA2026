@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://b51atdehj1wyf"]
+
+[ext_resource type="Script" uid="uid://cllad4j47vqgh" path="res://pantalla_1.gd" id="1_nklw4"]
+[ext_resource type="Texture2D" uid="uid://cfqw2k2khpy8r" path="res://32213.png" id="1_wvvbb"]
+[ext_resource type="Texture2D" uid="uid://de74nx7d1jol7" path="res://3031716.png" id="2_fgtg4"]
+
+[node name="Pantalla1" type="Node2D" unique_id=272565029]
+script = ExtResource("1_nklw4")
+
+[node name="flechita" type="TextureButton" parent="." unique_id=1619232343]
+offset_left = 643.0
+offset_top = 134.0
+offset_right = 1155.0
+offset_bottom = 646.0
+texture_normal = ExtResource("1_wvvbb")
+texture_hover = ExtResource("2_fgtg4")
+
+[connection signal="pressed" from="flechita" to="." method="_on_flechita_pressed"]
