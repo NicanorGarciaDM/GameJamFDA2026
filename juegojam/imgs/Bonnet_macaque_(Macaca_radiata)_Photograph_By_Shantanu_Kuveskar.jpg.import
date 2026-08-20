@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de74nx7d1jol7"
-path="res://.godot/imported/3031716.png-2d724a2d59e95349617808b6cb20cf81.ctex"
+uid="uid://dnl8ljcsknxdx"
+path="res://.godot/imported/Bonnet_macaque_(Macaca_radiata)_Photograph_By_Shantanu_Kuveskar.jpg-a4ce9fe55ebe3f94921dfd5b905f8e68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://3031716.png"
-dest_files=["res://.godot/imported/3031716.png-2d724a2d59e95349617808b6cb20cf81.ctex"]
+source_file="res://imgs/Bonnet_macaque_(Macaca_radiata)_Photograph_By_Shantanu_Kuveskar.jpg"
+dest_files=["res://.godot/imported/Bonnet_macaque_(Macaca_radiata)_Photograph_By_Shantanu_Kuveskar.jpg-a4ce9fe55ebe3f94921dfd5b905f8e68.ctex"]
 
 [params]
 

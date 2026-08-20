@@ -13,7 +13,7 @@ config_version=5
 config/name="juegojam"
 run/main_scene="uid://daicge6dgl37y"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://imgs/icon.svg"
 
 [display]
 

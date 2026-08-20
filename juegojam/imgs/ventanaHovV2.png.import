@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpr7k80j0c8ai"
-path="res://.godot/imported/right-arrow-icon-design-illustration-vector.webp-031176404b7565e7ee81ac2344448af1.ctex"
+uid="uid://1eloywt3wrsc"
+path="res://.godot/imported/ventanaHovV2.png-8becdc75e07d2ba60fa4ec80c8369fb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://right-arrow-icon-design-illustration-vector.webp"
-dest_files=["res://.godot/imported/right-arrow-icon-design-illustration-vector.webp-031176404b7565e7ee81ac2344448af1.ctex"]
+source_file="res://imgs/ventanaHovV2.png"
+dest_files=["res://.godot/imported/ventanaHovV2.png-8becdc75e07d2ba60fa4ec80c8369fb7.ctex"]
 
 [params]
 

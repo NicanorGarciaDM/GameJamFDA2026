@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://c2hbklrbttwbu"]
+
+[ext_resource type="Script" uid="uid://b3mcnqd5h45u7" path="res://scripts/escritorio.gd" id="1_uykhn"]
+[ext_resource type="Texture2D" uid="uid://d4g8ikr67hjky" path="res://imgs/fondoInicio.png" id="2_uykhn"]
+[ext_resource type="Texture2D" uid="uid://bvt5o0r8air4f" path="res://imgs/ventanaV2.png" id="3_35v04"]
+[ext_resource type="Texture2D" uid="uid://1eloywt3wrsc" path="res://imgs/ventanaHovV2.png" id="4_uykhn"]
+[ext_resource type="Texture2D" uid="uid://cnxaqlilld7u5" path="res://imgs/celuDER.png" id="5_gcknq"]
+[ext_resource type="Texture2D" uid="uid://qn4vyo6hh64t" path="res://imgs/celuDERhov.png" id="6_ke7vh"]
+[ext_resource type="Texture2D" uid="uid://r2q4vdkhrpe3" path="res://imgs/celuIZQ.png" id="7_fhq2k"]
+[ext_resource type="Texture2D" uid="uid://cwcngmyxmprdw" path="res://imgs/celuIZQhov.png" id="8_jccuk"]
+[ext_resource type="AudioStream" uid="uid://b2yeea3uav3mp" path="res://musica/Pensador 1.mp3" id="9_uykhn"]
+[ext_resource type="Texture2D" uid="uid://cqsoyw2doa5tu" path="res://imgs/compu.png" id="10_eunt6"]
+[ext_resource type="Texture2D" uid="uid://un1r3r58btrq" path="res://imgs/compuHov.png" id="11_a2aak"]
+[ext_resource type="Texture2D" uid="uid://bvljhuupu2q7e" path="res://imgs/reloj.png" id="12_uykhn"]
+
+[sub_resource type="Animation" id="Animation_upq64"]
+resource_name = "AnimacionTexto"
+length = 1.5
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2ocpx"]
+_data = {
+&"AnimacionTexto": SubResource("Animation_upq64")
+}
+
+[node name="escritorio" type="Control" unique_id=1510776705 node_paths=PackedStringArray("animacion_texto", "texto", "timerTexto", "timer", "click_sound")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_uykhn")
+animacion_texto = NodePath("Sprite2D/Celu izquierda/AnimacionTextoCeluIzq")
+texto = NodePath("Sprite2D/Celu izquierda/TextoCeluIzq")
+timerTexto = NodePath("Sprite2D/Reloj/Label")
+timer = NodePath("Sprite2D/Reloj/Timer")
+click_sound = NodePath("Sprite2D/Celu izquierda/AudioStreamPlayer")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=924171272]
+position = Vector2(577.28125, 328.37503)
+scale = Vector2(0.6013347, 0.6048611)
+texture = ExtResource("2_uykhn")
+
+[node name="Ventana" type="TextureButton" parent="Sprite2D" unique_id=1493072209]
+anchors_preset = -1
+anchor_left = 0.86300004
+anchor_top = 0.32700002
+anchor_right = 0.86300004
+anchor_bottom = 0.32700002
+offset_left = -1212.9824
+offset_top = -835.29535
+offset_right = -686.9824
+offset_bottom = -244.29535
+grow_horizontal = 0
+texture_normal = ExtResource("3_35v04")
+texture_hover = ExtResource("4_uykhn")
+
+[node name="Celu derecha" type="TextureButton" parent="Sprite2D" unique_id=1231144998]
+anchors_preset = -1
+anchor_left = 0.657
+anchor_top = 0.75100005
+anchor_right = 0.657
+anchor_bottom = 0.75100005
+offset_left = -1115.5667
+offset_top = -704.2374
+offset_right = -803.56665
+offset_bottom = -376.23743
+texture_normal = ExtResource("5_gcknq")
+texture_hover = ExtResource("6_ke7vh")
+
+[node name="Celu izquierda" type="TextureButton" parent="Sprite2D" unique_id=1824809284]
+anchors_preset = -1
+anchor_left = 0.09200001
+anchor_top = 0.763
+anchor_right = 0.09200001
+anchor_bottom = 0.763
+offset_left = -1139.9661
+offset_top = -809.78064
+offset_right = -796.96606
+offset_bottom = -269.78064
+texture_normal = ExtResource("7_fhq2k")
+texture_hover = ExtResource("8_jccuk")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D/Celu izquierda" unique_id=1179001685]
+stream = ExtResource("9_uykhn")
+
+[node name="AnimacionTextoCeluIzq" type="AnimationPlayer" parent="Sprite2D/Celu izquierda" unique_id=2019590811]
+libraries/ = SubResource("AnimationLibrary_2ocpx")
+
+[node name="TextoCeluIzq" type="Label" parent="Sprite2D/Celu izquierda" unique_id=120962810]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 2.453
+anchor_top = 0.86200005
+anchor_right = 2.453
+anchor_bottom = 0.86200005
+offset_left = -432.28882
+offset_top = -55.468475
+offset_right = 432.45435
+offset_bottom = 55.30069
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="Compu" type="TextureButton" parent="Sprite2D" unique_id=410018219]
+anchors_preset = -1
+anchor_left = 0.39200002
+anchor_top = 0.563
+anchor_right = 0.39200002
+anchor_bottom = 0.563
+offset_left = -1318.5166
+offset_top = -808.706
+offset_right = -602.5166
+offset_bottom = -270.706
+texture_normal = ExtResource("10_eunt6")
+texture_hover = ExtResource("11_a2aak")
+
+[node name="Reloj" type="TextureButton" parent="Sprite2D" unique_id=2122112277]
+offset_left = 51.08428
+offset_top = -442.0437
+offset_right = 364.0843
+offset_bottom = -246.0437
+texture_normal = ExtResource("12_uykhn")
+
+[node name="Label" type="Label" parent="Sprite2D/Reloj" unique_id=89483628]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.47800002
+anchor_top = 0.44700003
+anchor_right = 0.47800002
+anchor_bottom = 0.44700003
+offset_left = -63.139694
+offset_top = -34.7073
+offset_right = 73.22359
+offset_bottom = 24.810493
+rotation = 0.11254927
+theme_override_colors/font_color = Color(0.12218767, 1.248993e-05, 0.12400601, 1)
+theme_override_font_sizes/font_size = 46
+text = "00:00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="Sprite2D/Reloj" unique_id=1609570169]
+wait_time = 60.0
+autostart = true
+
+[node name="Control" type="Control" parent="." unique_id=2047654448]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="Sprite2D/Ventana" to="." method="_on_ventana_pressed"]
+[connection signal="pressed" from="Sprite2D/Celu derecha" to="." method="_on_celu_derecha_pressed"]
+[connection signal="pressed" from="Sprite2D/Celu izquierda" to="." method="_on_celu_izquierda_pressed"]
+[connection signal="pressed" from="Sprite2D/Compu" to="." method="_on_compu_pressed"]
+[connection signal="timeout" from="Sprite2D/Reloj/Timer" to="." method="_on_timer_timeout"]

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cwo540xkwreax"]
 
-[ext_resource type="Script" uid="uid://bsw2xvew66kgi" path="res://creditos.gd" id="1_nklw4"]
+[ext_resource type="Script" uid="uid://bsw2xvew66kgi" path="res://scripts/creditos.gd" id="1_nklw4"]
 
 [node name="Control" type="Control" unique_id=943659159]
 layout_mode = 3
