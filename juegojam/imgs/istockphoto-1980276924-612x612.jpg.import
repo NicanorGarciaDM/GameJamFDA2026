@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnxaqlilld7u5"
-path="res://.godot/imported/celuDER.png-ebb10d582f03e10bc09697a321458a94.ctex"
+uid="uid://qu1l64wkx8xi"
+path="res://.godot/imported/istockphoto-1980276924-612x612.jpg-ff51c285dc79ff6165e8971f5beb9679.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imgs/celuDER.png"
-dest_files=["res://.godot/imported/celuDER.png-ebb10d582f03e10bc09697a321458a94.ctex"]
+source_file="res://imgs/istockphoto-1980276924-612x612.jpg"
+dest_files=["res://.godot/imported/istockphoto-1980276924-612x612.jpg-ff51c285dc79ff6165e8971f5beb9679.ctex"]
 
 [params]
 

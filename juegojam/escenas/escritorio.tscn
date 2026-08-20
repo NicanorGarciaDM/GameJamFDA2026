@@ -4,13 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://d4g8ikr67hjky" path="res://imgs/fondoInicio.png" id="2_uykhn"]
 [ext_resource type="Texture2D" uid="uid://bvt5o0r8air4f" path="res://imgs/ventanaV2.png" id="3_35v04"]
 [ext_resource type="Texture2D" uid="uid://1eloywt3wrsc" path="res://imgs/ventanaHovV2.png" id="4_uykhn"]
-[ext_resource type="Texture2D" uid="uid://cnxaqlilld7u5" path="res://imgs/celuDER.png" id="5_gcknq"]
-[ext_resource type="Texture2D" uid="uid://qn4vyo6hh64t" path="res://imgs/celuDERhov.png" id="6_ke7vh"]
-[ext_resource type="Texture2D" uid="uid://r2q4vdkhrpe3" path="res://imgs/celuIZQ.png" id="7_fhq2k"]
-[ext_resource type="Texture2D" uid="uid://cwcngmyxmprdw" path="res://imgs/celuIZQhov.png" id="8_jccuk"]
+[ext_resource type="Texture2D" uid="uid://cj46kj0mxr63b" path="res://imgs/celuDERV2.png" id="5_gxs34"]
+[ext_resource type="Texture2D" uid="uid://dr3srqhxr4b64" path="res://imgs/celuDERV2Hov.png" id="6_uykhn"]
+[ext_resource type="Texture2D" uid="uid://ddmv1k5uk1080" path="res://imgs/celuIZQV2.png" id="7_qhxaq"]
+[ext_resource type="Texture2D" uid="uid://lwfv21lmqm0c" path="res://imgs/celuIZQV2hov.png" id="8_35v04"]
 [ext_resource type="AudioStream" uid="uid://b2yeea3uav3mp" path="res://musica/Pensador 1.mp3" id="9_uykhn"]
-[ext_resource type="Texture2D" uid="uid://cqsoyw2doa5tu" path="res://imgs/compu.png" id="10_eunt6"]
-[ext_resource type="Texture2D" uid="uid://un1r3r58btrq" path="res://imgs/compuHov.png" id="11_a2aak"]
+[ext_resource type="Texture2D" uid="uid://c26n2j7dcjvtg" path="res://imgs/compuV2.png" id="10_tbdxe"]
+[ext_resource type="Texture2D" uid="uid://c2hud7hxuhd0r" path="res://imgs/compuV2Hov.png" id="11_gcknq"]
 [ext_resource type="Texture2D" uid="uid://bvljhuupu2q7e" path="res://imgs/reloj.png" id="12_uykhn"]
 
 [sub_resource type="Animation" id="Animation_upq64"]
@@ -22,7 +22,7 @@ _data = {
 &"AnimacionTexto": SubResource("Animation_upq64")
 }
 
-[node name="escritorio" type="Control" unique_id=1510776705 node_paths=PackedStringArray("animacion_texto", "texto", "timerTexto", "timer", "click_sound")]
+[node name="escritorio" type="Control" unique_id=1510776705 node_paths=PackedStringArray("animacion_texto", "texto", "pantallaEleccion", "pantallaCelu", "timerTexto", "timer", "click_sound")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -32,6 +32,8 @@ grow_vertical = 2
 script = ExtResource("1_uykhn")
 animacion_texto = NodePath("Sprite2D/Celu izquierda/AnimacionTextoCeluIzq")
 texto = NodePath("Sprite2D/Celu izquierda/TextoCeluIzq")
+pantallaEleccion = NodePath("EleccionesTitulo")
+pantallaCelu = NodePath("PantallaCelular")
 timerTexto = NodePath("Sprite2D/Reloj/Label")
 timer = NodePath("Sprite2D/Reloj/Timer")
 click_sound = NodePath("Sprite2D/Celu izquierda/AudioStreamPlayer")
@@ -65,8 +67,8 @@ offset_left = -1115.5667
 offset_top = -704.2374
 offset_right = -803.56665
 offset_bottom = -376.23743
-texture_normal = ExtResource("5_gcknq")
-texture_hover = ExtResource("6_ke7vh")
+texture_normal = ExtResource("5_gxs34")
+texture_hover = ExtResource("6_uykhn")
 
 [node name="Celu izquierda" type="TextureButton" parent="Sprite2D" unique_id=1824809284]
 anchors_preset = -1
@@ -74,12 +76,12 @@ anchor_left = 0.09200001
 anchor_top = 0.763
 anchor_right = 0.09200001
 anchor_bottom = 0.763
-offset_left = -1139.9661
-offset_top = -809.78064
-offset_right = -796.96606
-offset_bottom = -269.78064
-texture_normal = ExtResource("7_fhq2k")
-texture_hover = ExtResource("8_jccuk")
+offset_left = -1139.966
+offset_top = -692.3983
+offset_right = -787.96594
+offset_bottom = -152.39832
+texture_normal = ExtResource("7_qhxaq")
+texture_hover = ExtResource("8_35v04")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Sprite2D/Celu izquierda" unique_id=1179001685]
 stream = ExtResource("9_uykhn")
@@ -111,8 +113,8 @@ offset_left = -1318.5166
 offset_top = -808.706
 offset_right = -602.5166
 offset_bottom = -270.706
-texture_normal = ExtResource("10_eunt6")
-texture_hover = ExtResource("11_a2aak")
+texture_normal = ExtResource("10_tbdxe")
+texture_hover = ExtResource("11_gcknq")
 
 [node name="Reloj" type="TextureButton" parent="Sprite2D" unique_id=2122112277]
 offset_left = 51.08428
@@ -141,15 +143,71 @@ vertical_alignment = 1
 
 [node name="Timer" type="Timer" parent="Sprite2D/Reloj" unique_id=1609570169]
 wait_time = 60.0
+one_shot = true
 autostart = true
 
-[node name="Control" type="Control" parent="." unique_id=2047654448]
+[node name="EleccionesTitulo" type="Control" parent="." unique_id=2047654448]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="EleccionesTitulo" unique_id=1663887488]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureButton" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2026406123]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 74.0
+offset_right = 564.0
+offset_bottom = 270.0
+texture_normal = ExtResource("12_uykhn")
+
+[node name="TextureButton2" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=1354904249]
+layout_mode = 0
+offset_left = 645.0
+offset_top = 67.0
+offset_right = 958.0
+offset_bottom = 263.0
+texture_normal = ExtResource("12_uykhn")
+
+[node name="TextureButton3" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=1819490702]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 271.0
+offset_right = 422.0
+offset_bottom = 467.0
+texture_normal = ExtResource("12_uykhn")
+
+[node name="TextureButton4" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2046035084]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 286.0
+offset_right = 757.0
+offset_bottom = 482.0
+texture_normal = ExtResource("12_uykhn")
+
+[node name="TextureButton5" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2061157280]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 306.0
+offset_right = 1082.0
+offset_bottom = 502.0
+texture_normal = ExtResource("12_uykhn")
+
+[node name="PantallaCelular" type="Control" parent="." unique_id=2031263791]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [connection signal="pressed" from="Sprite2D/Ventana" to="." method="_on_ventana_pressed"]
 [connection signal="pressed" from="Sprite2D/Celu derecha" to="." method="_on_celu_derecha_pressed"]
