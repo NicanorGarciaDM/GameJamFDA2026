@@ -22,7 +22,7 @@ _data = {
 &"AnimacionTexto": SubResource("Animation_upq64")
 }
 
-[node name="escritorio" type="Control" unique_id=1510776705 node_paths=PackedStringArray("animacion_texto", "texto", "pantallaEleccion", "pantallaCelu", "timerTexto", "timer", "click_sound")]
+[node name="escritorio" type="Control" unique_id=1510776705 node_paths=PackedStringArray("pantalla_resultado", "titulo_resultado", "titulo_a", "titulo_b", "titulo_c", "titulo_d", "titulo_e", "opcion_a", "opcion_b", "opcion_c", "opcion_d", "animacion_texto", "texto", "pantallaEleccion", "pantallaCelu", "timerTexto", "timer", "click_sound")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,6 +30,17 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uykhn")
+pantalla_resultado = NodePath("Resultado+Titulo/ImagenResultado")
+titulo_resultado = NodePath("Resultado+Titulo/TituloResultado")
+titulo_a = NodePath("EleccionesTitulo/ColorRect/OpcionA/Label")
+titulo_b = NodePath("EleccionesTitulo/ColorRect/OpcionB/Label")
+titulo_c = NodePath("EleccionesTitulo/ColorRect/OpcionC/Label")
+titulo_d = NodePath("EleccionesTitulo/ColorRect/OpcionD/Label")
+titulo_e = NodePath("EleccionesTitulo/ColorRect/OpcionE/Label")
+opcion_a = NodePath("EleccionesTitulo/ColorRect/OpcionA")
+opcion_b = NodePath("EleccionesTitulo/ColorRect/OpcionB")
+opcion_c = NodePath("EleccionesTitulo/ColorRect/OpcionC")
+opcion_d = NodePath("EleccionesTitulo/ColorRect/OpcionD")
 animacion_texto = NodePath("Sprite2D/Celu izquierda/AnimacionTextoCeluIzq")
 texto = NodePath("Sprite2D/Celu izquierda/TextoCeluIzq")
 pantallaEleccion = NodePath("EleccionesTitulo")
@@ -163,7 +174,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureButton" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2026406123]
+[node name="OpcionA" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2026406123]
 layout_mode = 0
 offset_left = 251.0
 offset_top = 74.0
@@ -171,7 +182,12 @@ offset_right = 564.0
 offset_bottom = 270.0
 texture_normal = ExtResource("12_uykhn")
 
-[node name="TextureButton2" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=1354904249]
+[node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionA" unique_id=1501112115]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="OpcionB" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=1354904249]
 layout_mode = 0
 offset_left = 645.0
 offset_top = 67.0
@@ -179,7 +195,12 @@ offset_right = 958.0
 offset_bottom = 263.0
 texture_normal = ExtResource("12_uykhn")
 
-[node name="TextureButton3" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=1819490702]
+[node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionB" unique_id=1137603843]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="OpcionC" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=1819490702]
 layout_mode = 0
 offset_left = 109.0
 offset_top = 271.0
@@ -187,7 +208,12 @@ offset_right = 422.0
 offset_bottom = 467.0
 texture_normal = ExtResource("12_uykhn")
 
-[node name="TextureButton4" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2046035084]
+[node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionC" unique_id=551782323]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="OpcionD" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2046035084]
 layout_mode = 0
 offset_left = 444.0
 offset_top = 286.0
@@ -195,7 +221,12 @@ offset_right = 757.0
 offset_bottom = 482.0
 texture_normal = ExtResource("12_uykhn")
 
-[node name="TextureButton5" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2061157280]
+[node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionD" unique_id=677685609]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="OpcionE" type="TextureButton" parent="EleccionesTitulo/ColorRect" unique_id=2061157280]
 layout_mode = 0
 offset_left = 769.0
 offset_top = 306.0
@@ -203,9 +234,35 @@ offset_right = 1082.0
 offset_bottom = 502.0
 texture_normal = ExtResource("12_uykhn")
 
+[node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionE" unique_id=1698947075]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
 [node name="PantallaCelular" type="Control" parent="." unique_id=2031263791]
 visible = false
 anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Resultado+Titulo" type="Control" parent="." unique_id=1020579224]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ImagenResultado" type="TextureRect" parent="Resultado+Titulo" unique_id=1077825187]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TituloResultado" type="Label" parent="Resultado+Titulo" unique_id=1856575333]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Continuar" type="TextureButton" parent="Resultado+Titulo" unique_id=2094748416]
+layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
@@ -214,3 +271,9 @@ offset_bottom = 40.0
 [connection signal="pressed" from="Sprite2D/Celu izquierda" to="." method="_on_celu_izquierda_pressed"]
 [connection signal="pressed" from="Sprite2D/Compu" to="." method="_on_compu_pressed"]
 [connection signal="timeout" from="Sprite2D/Reloj/Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="EleccionesTitulo/ColorRect/OpcionA" to="." method="_on_opcion_a_pressed"]
+[connection signal="pressed" from="EleccionesTitulo/ColorRect/OpcionB" to="." method="_on_opcion_b_pressed"]
+[connection signal="pressed" from="EleccionesTitulo/ColorRect/OpcionC" to="." method="_on_opcion_c_pressed"]
+[connection signal="pressed" from="EleccionesTitulo/ColorRect/OpcionD" to="." method="_on_opcion_d_pressed"]
+[connection signal="pressed" from="EleccionesTitulo/ColorRect/OpcionE" to="." method="_on_opcion_e_pressed"]
+[connection signal="pressed" from="Resultado+Titulo/Continuar" to="." method="_on_continuar_pressed"]

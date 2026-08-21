@@ -10,11 +10,5 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-func _on_button_pressed() -> void:
-	Global.reiniciar_juego()
-	get_tree().change_scene_to_file("res://escenas/pantalla1.tscn")
-
-
-func _on_button_2_pressed() -> void:
-	get_tree().change_scene_to_file("res://escenas/creditos.tscn")
+func _on_texture_rect_pressed() -> void:
+	get_tree().change_scene_to_file("res://escenas/escritorio.tscn")
