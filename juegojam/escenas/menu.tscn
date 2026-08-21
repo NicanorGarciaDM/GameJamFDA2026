@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c5wd3leokm0pu" path="res://imgs/JugarHover.png" id="3_6cq3m"]
 [ext_resource type="Texture2D" uid="uid://bde2j7oj3t1jx" path="res://imgs/CreditosNormal.png" id="4_5t3kx"]
 [ext_resource type="Texture2D" uid="uid://cluvvjsijj8c" path="res://imgs/CreditosHover.png" id="5_56ah5"]
+[ext_resource type="AudioStream" uid="uid://bii426qewg744" path="res://musica/kortina cheta.mp3" id="6_56ah5"]
 
 [node name="Control" type="Control" unique_id=1551116990]
 layout_mode = 3
@@ -47,6 +48,10 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("4_5t3kx")
 texture_hover = ExtResource("5_56ah5")
+
+[node name="MusicaMenu" type="AudioStreamPlayer" parent="." unique_id=2028927767]
+stream = ExtResource("6_56ah5")
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

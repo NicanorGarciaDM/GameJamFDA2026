@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://brth7qxdslys" path="res://scripts/pantalla_2.gd" id="1_mv3rx"]
 [ext_resource type="Texture2D" uid="uid://c51nv51l3lmni" path="res://imgs/correoAdentro.png" id="2_558h5"]
-[ext_resource type="AudioStream" uid="uid://b0lkeeuk5xrwg" path="res://musica/OST 1.mp3" id="3_084c4"]
 
 [node name="Pantalla2" type="Control" unique_id=877744193]
 layout_mode = 3
@@ -23,7 +22,7 @@ anchor_bottom = 0.17300001
 offset_left = 848.0
 offset_top = 208.0
 offset_right = 887.68
-offset_bottom = 271.896
+offset_bottom = 263.896
 
 [node name="Texto" type="Label" parent="." unique_id=892888706]
 layout_mode = 0
@@ -48,9 +47,5 @@ Tendrá hasta las 20hs del día de hoy para entregar su titular.
 Esperamos que mantenga su rendimiento y refleje su compromiso con el medio en el cumplimiento de su nueva labor.
 "
 autowrap_mode = 2
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=399963276]
-stream = ExtResource("3_084c4")
-autoplay = true
 
 [connection signal="pressed" from="TextureRect" to="." method="_on_texture_rect_pressed"]

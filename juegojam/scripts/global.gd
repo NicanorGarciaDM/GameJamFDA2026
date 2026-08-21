@@ -1,6 +1,7 @@
 extends Node
 
 var dia = 1
+var ruta = "A"
 var dia_final = 5
 
 var respuestas = {

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://be2w3jphgj85h"
-path="res://.godot/imported/correoPpal.png-c1780f5ff7a3e7fa6daf442c1e688daf.ctex"
+uid="uid://qq8w0uwvr8f6"
+path="res://.godot/imported/crumpled-white-paper-on-a-plain-background-isolated-transparent-png.webp-64c5808e873b931dadfafe3c8b4afd73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://escenas/correoPpal.png"
-dest_files=["res://.godot/imported/correoPpal.png-c1780f5ff7a3e7fa6daf442c1e688daf.ctex"]
+source_file="res://imgs/crumpled-white-paper-on-a-plain-background-isolated-transparent-png.webp"
+dest_files=["res://.godot/imported/crumpled-white-paper-on-a-plain-background-isolated-transparent-png.webp-64c5808e873b931dadfafe3c8b4afd73.ctex"]
 
 [params]
 

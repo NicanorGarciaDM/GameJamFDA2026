@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://c26n2j7dcjvtg" path="res://imgs/compuV2.png" id="10_tbdxe"]
 [ext_resource type="Texture2D" uid="uid://c2hud7hxuhd0r" path="res://imgs/compuV2Hov.png" id="11_gcknq"]
 [ext_resource type="Texture2D" uid="uid://bvljhuupu2q7e" path="res://imgs/reloj.png" id="12_uykhn"]
+[ext_resource type="Texture2D" uid="uid://bfklyyfbise70" path="res://imgs/white-torn-paper-isolated-on-a-transparent-background-png.webp" id="13_qhxaq"]
+[ext_resource type="AudioStream" uid="uid://ddxcstx4ckmdq" path="res://musica/para pensar.mp3" id="13_uykhn"]
 
 [sub_resource type="Animation" id="Animation_upq64"]
 resource_name = "AnimacionTexto"
@@ -22,7 +24,7 @@ _data = {
 &"AnimacionTexto": SubResource("Animation_upq64")
 }
 
-[node name="escritorio" type="Control" unique_id=1510776705 node_paths=PackedStringArray("pantalla_resultado", "titulo_resultado", "titulo_a", "titulo_b", "titulo_c", "titulo_d", "titulo_e", "opcion_a", "opcion_b", "opcion_c", "opcion_d", "animacion_texto", "texto", "pantallaEleccion", "pantallaCelu", "timerTexto", "timer", "click_sound")]
+[node name="escritorio" type="Control" unique_id=1510776705 node_paths=PackedStringArray("pantallaCompu", "pantalla_resultado", "titulo_resultado", "titulo_a", "titulo_b", "titulo_c", "titulo_d", "titulo_e", "opcion_a", "opcion_b", "opcion_c", "opcion_d", "animacion_texto", "texto", "pantallaEleccion", "pantallaCelu", "timerTexto", "timer", "click_sound")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,6 +32,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_uykhn")
+pantallaCompu = NodePath("PantallaComputadora")
 pantalla_resultado = NodePath("Resultado+Titulo/ImagenResultado")
 titulo_resultado = NodePath("Resultado+Titulo/TituloResultado")
 titulo_a = NodePath("EleccionesTitulo/ColorRect/OpcionA/Label")
@@ -180,7 +183,7 @@ offset_left = 251.0
 offset_top = 74.0
 offset_right = 564.0
 offset_bottom = 270.0
-texture_normal = ExtResource("12_uykhn")
+texture_normal = ExtResource("13_qhxaq")
 
 [node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionA" unique_id=1501112115]
 layout_mode = 0
@@ -193,7 +196,7 @@ offset_left = 645.0
 offset_top = 67.0
 offset_right = 958.0
 offset_bottom = 263.0
-texture_normal = ExtResource("12_uykhn")
+texture_normal = ExtResource("13_qhxaq")
 
 [node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionB" unique_id=1137603843]
 layout_mode = 0
@@ -206,7 +209,7 @@ offset_left = 109.0
 offset_top = 271.0
 offset_right = 422.0
 offset_bottom = 467.0
-texture_normal = ExtResource("12_uykhn")
+texture_normal = ExtResource("13_qhxaq")
 
 [node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionC" unique_id=551782323]
 layout_mode = 0
@@ -219,7 +222,7 @@ offset_left = 444.0
 offset_top = 286.0
 offset_right = 757.0
 offset_bottom = 482.0
-texture_normal = ExtResource("12_uykhn")
+texture_normal = ExtResource("13_qhxaq")
 
 [node name="Label" type="Label" parent="EleccionesTitulo/ColorRect/OpcionD" unique_id=677685609]
 layout_mode = 0
@@ -245,6 +248,46 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
+[node name="Dia1" type="Control" parent="PantallaCelular" unique_id=1847480180]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Feed" type="Sprite2D" parent="PantallaCelular/Dia1" unique_id=1856142638]
+
+[node name="Dia2" type="Control" parent="PantallaCelular" unique_id=1674143444]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Feed" type="Sprite2D" parent="PantallaCelular/Dia2" unique_id=1248164871]
+
+[node name="Dia3" type="Control" parent="PantallaCelular" unique_id=823519874]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Feed" type="Sprite2D" parent="PantallaCelular/Dia3" unique_id=1954297594]
+
+[node name="Dia4" type="Control" parent="PantallaCelular" unique_id=781085775]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Feed" type="Sprite2D" parent="PantallaCelular/Dia4" unique_id=1904221097]
+
+[node name="Dia5" type="Control" parent="PantallaCelular" unique_id=836045923]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Feed" type="Sprite2D" parent="PantallaCelular/Dia5" unique_id=419769961]
+
 [node name="Resultado+Titulo" type="Control" parent="." unique_id=1020579224]
 visible = false
 anchors_preset = 0
@@ -265,6 +308,56 @@ offset_bottom = 23.0
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="PantallaComputadora" type="Control" parent="." unique_id=721532620]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Dia1" type="Control" parent="PantallaComputadora" unique_id=682740607]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Imagen" type="Sprite2D" parent="PantallaComputadora/Dia1" unique_id=1005567274]
+
+[node name="Dia2" type="Control" parent="PantallaComputadora" unique_id=504888962]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Imagen" type="Sprite2D" parent="PantallaComputadora/Dia2" unique_id=1240246858]
+
+[node name="Dia3" type="Control" parent="PantallaComputadora" unique_id=2003593558]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Imagen" type="Sprite2D" parent="PantallaComputadora/Dia3" unique_id=959648074]
+
+[node name="Dia4" type="Control" parent="PantallaComputadora" unique_id=1144659088]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Imagen" type="Sprite2D" parent="PantallaComputadora/Dia4" unique_id=362560349]
+
+[node name="Dia5" type="Control" parent="PantallaComputadora" unique_id=501621238]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Imagen" type="Sprite2D" parent="PantallaComputadora/Dia5" unique_id=1648819804]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=612244864]
+stream = ExtResource("13_uykhn")
+autoplay = true
 
 [connection signal="pressed" from="Sprite2D/Ventana" to="." method="_on_ventana_pressed"]
 [connection signal="pressed" from="Sprite2D/Celu derecha" to="." method="_on_celu_derecha_pressed"]

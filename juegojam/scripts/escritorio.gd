@@ -55,6 +55,8 @@ var interactuo_b = false
 var interactuo_c = false
 var interactuo_d = false
 
+@export var pantallaCompu : Control
+
 @export var pantalla_resultado : Control
 @export var titulo_resultado : Label
 
@@ -96,13 +98,22 @@ func _process(delta: float) -> void:
 func _on_ventana_pressed() -> void:
 	interactuo_d = true
 
+func mostrar_contenido_dia(contenedor):
+	for contenido in contenedor.get_children():
+		contenido.visible = false
 
+	var contenido_actual = contenedor.get_node("Dia" + str(Global.dia))
+	contenido_actual.visible = true
+	
 func _on_celu_derecha_pressed() -> void:
 	pantallaCelu.visible=true
 	interactuo_c = true
+	mostrar_contenido_dia(pantallaCelu)
 
 func _on_compu_pressed() -> void:
 	interactuo_b = true
+	pantallaCompu.visible = true
+	mostrar_contenido_dia(pantallaCompu)
 
 
 func _on_celu_izquierda_pressed():
@@ -151,7 +162,15 @@ func elegir_titulo(opcion, texto_titulo):
 
 	elif opcion == "E":
 		titulo_resultado.text = "Título de la opción E"
+	if Global.dia == 2:
+		if opcion == "A" or opcion == "C":
+			Global.ruta = "A"
 
+		elif opcion == "B" or opcion == "D" or opcion == "E":
+			Global.ruta = "B"
+			Global.dia += 1
+
+	get_tree().change_scene_to_file("res://escenas/pantalla2.tscn")
 func _on_opcion_a_pressed() -> void:
 	elegir_titulo("A", titulos_por_dia[Global.dia][0])
 

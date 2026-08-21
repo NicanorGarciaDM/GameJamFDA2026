@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://b51atdehj1wyf"]
 
 [ext_resource type="Script" uid="uid://cllad4j47vqgh" path="res://scripts/pantalla_1.gd" id="1_nklw4"]
-[ext_resource type="Texture2D" uid="uid://be2w3jphgj85h" path="res://escenas/correoPpal.png" id="2_bfcus"]
+[ext_resource type="Texture2D" uid="uid://be2w3jphgj85h" path="res://imgs/correoPpal.png" id="2_bfcus"]
 
 [node name="Pantalla1" type="Control" unique_id=117167052]
 layout_mode = 3
+anchors_preset = 0
 script = ExtResource("1_nklw4")
 
 [node name="TextureRect" type="TextureButton" parent="." unique_id=1339840378]
