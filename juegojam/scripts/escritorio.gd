@@ -148,6 +148,7 @@ func elegir_titulo(opcion, texto_titulo):
 	pantalla_resultado.visible = true
 
 	titulo_resultado.text = texto_titulo
+
 	if opcion == "A":
 		titulo_resultado.text = "Título de la opción A"
 
@@ -162,15 +163,25 @@ func elegir_titulo(opcion, texto_titulo):
 
 	elif opcion == "E":
 		titulo_resultado.text = "Título de la opción E"
+
+
+	# La ruta solamente se decide en el día 2
 	if Global.dia == 2:
 		if opcion == "A" or opcion == "C":
 			Global.ruta = "A"
 
 		elif opcion == "B" or opcion == "D" or opcion == "E":
 			Global.ruta = "B"
-			Global.dia += 1
+
+
+	# Esto tiene que estar FUERA del if anterior
+	Global.dia += 1
+
+	print("Nuevo día: ", Global.dia)
+	print("Ruta: ", Global.ruta)
 
 	get_tree().change_scene_to_file("res://escenas/pantalla2.tscn")
+
 func _on_opcion_a_pressed() -> void:
 	elegir_titulo("A", titulos_por_dia[Global.dia][0])
 
