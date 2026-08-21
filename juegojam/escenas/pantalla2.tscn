@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bkive7wbag3n3"]
+
+[node name="Pantalla2" type="Control" unique_id=877744193]
+layout_mode = 3
+anchors_preset = 0

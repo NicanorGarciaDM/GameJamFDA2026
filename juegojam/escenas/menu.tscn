@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://daicge6dgl37y"]
 
 [ext_resource type="Script" uid="uid://cwe6ll4eyu7fm" path="res://scripts/menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://br126mdafmlu" path="res://imgs/JugarNormal.png" id="2_2owot"]
+[ext_resource type="Texture2D" uid="uid://c5wd3leokm0pu" path="res://imgs/JugarHover.png" id="3_6cq3m"]
+[ext_resource type="Texture2D" uid="uid://bde2j7oj3t1jx" path="res://imgs/CreditosNormal.png" id="4_5t3kx"]
+[ext_resource type="Texture2D" uid="uid://cluvvjsijj8c" path="res://imgs/CreditosHover.png" id="5_56ah5"]
 
 [node name="Control" type="Control" unique_id=1551116990]
 layout_mode = 3
@@ -12,35 +16,37 @@ grow_vertical = 2
 size_flags_horizontal = 4
 script = ExtResource("1_lti8b")
 
-[node name="Button" type="Button" parent="." unique_id=1517783829]
+[node name="Button" type="TextureButton" parent="." unique_id=1010143050]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -99.5
-offset_top = -48.5
-offset_right = 99.5
-offset_bottom = 48.5
+offset_left = -320.0
+offset_top = -84.0
+offset_right = 330.0
+offset_bottom = 71.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Empezar juego"
+texture_normal = ExtResource("2_2owot")
+texture_hover = ExtResource("3_6cq3m")
 
-[node name="Button2" type="Button" parent="." unique_id=1841235036]
+[node name="Button2" type="TextureButton" parent="." unique_id=386512786]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.50100005
-anchor_top = 0.762
-anchor_right = 0.50100005
-anchor_bottom = 0.762
-offset_left = -82.15204
-offset_top = -19.776001
-offset_right = 82.84796
-offset_bottom = 20.223999
+anchor_left = 0.507
+anchor_top = 0.827
+anchor_right = 0.507
+anchor_bottom = 0.827
+offset_left = -328.06403
+offset_top = -95.895996
+offset_right = 321.93597
+offset_bottom = 59.104004
 grow_horizontal = 2
 grow_vertical = 0
-text = "Creditos"
+texture_normal = ExtResource("4_5t3kx")
+texture_hover = ExtResource("5_56ah5")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
